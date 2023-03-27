@@ -29,7 +29,7 @@ def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     #take the json format and normalize it
     fruityvice_normalized =  pandas.json_normalize(fruityvice_response.json())  
-    return fruitvice_normalized
+    return fruityvice_normalized
   
   
 streamlit.header("Fruityvice Fruit Advice!")
@@ -41,7 +41,7 @@ try:
     streamlit.error("Please select a fruit to get information.")
   else:
     from_function = get_fruityvice_data(fruit_choice)
-    streamlit.write('The user entered ', fruit_choice)
+    streamlit.write('The user entered ', from_function)
     #output as table
     streamlit.dataframe(from_function)
 except URLError as e:
