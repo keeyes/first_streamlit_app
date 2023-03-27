@@ -32,7 +32,7 @@ def get_fruityvice_data(this_fruit_choice):
     return fruitvice_normalized
   
   
-streamlit.header("Fruityvice Fruit Advice!"
+streamlit.header("Fruityvice Fruit Advice!")
 
 try:
   #user input
