@@ -40,7 +40,7 @@ try:
   if not fruit_choice:
     streamlit.error("Please select a fruit to get information.")
   else:
-    from_function = get_fruitvice_data(fruit_choice)
+    from_function = get_fruityvice_data(fruit_choice)
     streamlit.write('The user entered ', fruit_choice)
     #output as table
     streamlit.dataframe(from_function)
